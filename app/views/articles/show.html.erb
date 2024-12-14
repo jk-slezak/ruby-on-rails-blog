@@ -1,6 +1,7 @@
-<h1><%= @article.title %></h1>
-
-<p><%= @article.body %></p>
+<% cache @article do %>
+  <h1><%= @article.title %></h1>
+  <p><%= @article.body %></p>
+<% end %>
 
 <ul>
   <% if authenticated? %>
