@@ -1,5 +1,6 @@
 <% cache @article do %>
   <h1><%= @article.title %></h1>
+  <%= image_tag @article.featured_image if @article.featured_image.attached? %>
   <p><%= @article.body %></p>
 <% end %>
 
