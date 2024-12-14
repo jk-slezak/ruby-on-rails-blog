@@ -9,10 +9,15 @@
 
   <div>
     <%= form.label :body %><br>
-    <%= form.textarea :body %><br>
+    <%= form.rich_text_area :body %><br>
     <% article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
+  </div>
+
+  <div>
+    <%= form.label :featured_image, style: "display: block" %>
+    <%= form.file_field :featured_image, accept: "image/*" %>
   </div>
 
   <div>
