@@ -28,6 +28,12 @@
 #       enabled: "ON"
 
 en:
+  login:
+    title: "Sign in"
+    username: "Enter your email address"
+    password: "Enter your password"
+    sign_in: "Sign in"
+    forgot_password: "Forgot password?"
   articles: 
     index:
-      title: "Article"
+      title: "Articles"

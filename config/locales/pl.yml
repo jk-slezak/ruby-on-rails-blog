@@ -1,4 +1,10 @@
 pl:
+  login:
+    title: "Zaloguj się"
+    username: "Wprowadź swój adres e-mail"
+    password: "Wprowadź swoje hasło"
+    sign_in: "Zaloguj się"
+    forgot_password: "Zapomniałeś hasła?"
   articles: 
     index:
-      title: "Artykuł"
+      title: "Artykuły"
