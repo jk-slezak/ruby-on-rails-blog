@@ -28,12 +28,41 @@
 #       enabled: "ON"
 
 en:
-  login:
-    title: "Sign in"
-    username: "Enter your email address"
-    password: "Enter your password"
-    sign_in: "Sign in"
-    forgot_password: "Forgot password?"
-  articles: 
+  layouts:
+    application:
+      home: "Home"
+      login: "Login"
+      logout: "Logout"
+  sessions:
+    new:
+      title: "Sign in"
+      username: "Enter your email address"
+      password: "Enter your password"
+      sign_in: "Sign in"
+      forgot_password: "Forgot password?"
+  passwords:
+    new:
+      title: "Forgot your password?"
+      email: "Enter your email address"
+      submit: "Email reset instructions"
+    edit:
+      title: "Update your password"
+      new_password: "Enter new password"
+      repeat_password: "Repeat new password"
+      save: "Save"
+  articles:
     index:
       title: "Articles"
+      new_article: "New article"
+    show:
+      title: "Articles"
+      home: "Home"
+      edit: "Edit"
+      destroy: "Destroy"
+      are_you_sure: "Are you sure?"
+    new:
+      title: "New article"
+    edit:
+      title: "Edit article"
+    _form:
+      back: "Back"

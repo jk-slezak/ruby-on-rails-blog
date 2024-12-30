@@ -25,9 +25,9 @@
   <body>
     <nav class="navbar">
       <div class="navbar__container">
-        <%= link_to "Home", root_path, class: "navbar__container__link" %>
-        <%= link_to "Login", new_session_path, class: "navbar__container__link" unless authenticated? %>
-        <%= button_to "Log out", session_path, method: :delete, class: "navbar__container__button" if authenticated? %>
+        <%= link_to t(".home"), root_path, class: "navbar__container__link" %>
+        <%= link_to t(".login"), new_session_path, class: "navbar__container__link" unless authenticated? %>
+        <%= button_to t(".logout"), session_path, method: :delete, class: "navbar__container__button" if authenticated? %>
       </div>
     </nav>
 
