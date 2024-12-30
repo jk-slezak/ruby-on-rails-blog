@@ -1,11 +1,13 @@
-<h1><%= t ".title" %></h1>
-<div>
-  <%= link_to 'New Article', new_article_path if authenticated? %>
-</div>
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-    </li>
-  <% end %>
-</ul>
+<section class="articles">
+  <div class="articles__flex">
+    <h1><%= t ".title" %></h1>
+    <%= link_to t(".new_article"), new_article_path if authenticated? %>
+  </div>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
+  </ul>
+</section>

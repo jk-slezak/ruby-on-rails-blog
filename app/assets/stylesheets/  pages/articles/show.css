@@ -1,0 +1,35 @@
+.article {
+    .article__breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .article__breadcrumbs__link {
+            color: var(--color-primary);
+
+            &:hover {
+                color: var(--color-link);  
+            }
+        }
+
+        .article__breadcrumbs__item {
+            color: var(--color-secondary);
+        }
+    }
+
+    .article__image {
+        border-radius: 12px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+
+    .actions__item {
+        display: inline-block;
+        padding: 8px;
+    }
+}

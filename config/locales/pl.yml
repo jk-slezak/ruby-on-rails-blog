@@ -1,4 +1,36 @@
 pl:
-  articles: 
+  layouts:
+    application:
+      home: "Strona główna"
+      login: "Zaloguj się"
+      logout: "Wyloguj się"
+  sessions:
+    new:
+      title: "Zaloguj się"
+      username: "Wprowadź swój adres e-mail"
+      password: "Wprowadź swoje hasło"
+      sign_in: "Zaloguj się"
+      forgot_password: "Zapomniałeś hasła?"
+  passwords:
+    new:
+      title: "Zapomniałeś hasła?"
+      email: "Podaj swój adres email"
+      submit: "Wyślij intrukcje resetowania hasła"
+    edit:
+      title: "Aktualizuj swoje hasło"
+      new_password: "Podaj nowe hsało"
+      repeat_password: "Powtórz nowe hasło"
+      save: "Zapisz"
+  articles:
     index:
-      title: "Artykuł"
+      title: "Artykuły"
+      new_article: "Nowy artykuł"
+    show:
+      title: "Artykuły"
+      home: "Strona główna"
+    new:
+      title: "Nowy artykuł"
+    edit:
+      title: "Edytuj artykuł"
+    _form:
+      back: "Wróć"

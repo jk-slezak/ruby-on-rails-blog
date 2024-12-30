@@ -1,14 +1,18 @@
 <% cache @article do %>
-  <h1><%= @article.title %></h1>
-  <%= image_tag @article.featured_image if @article.featured_image.attached? %>
-  <p><%= @article.body %></p>
+  <section class="article">
+    <div class="article__breadcrumbs">
+      <%= link_to t(".home"), articles_path, class: "article__breadcrumbs__link" %>
+      <span class="article__breadcrumbs__item">/</span>
+      <h1><%= @article.title %></h1>
+    </div>
+    <%= image_tag @article.featured_image, class: "article__image" if @article.featured_image.attached? %>
+    <p><%= @article.body %></p>
+  </section>
 <% end %>
 
-<ul>
-  <% if authenticated? %>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to "Destroy", article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></li>
-  <% end %>
-  <li><%= link_to 'Back', articles_path %></li>
-</ul>
-
+<% if authenticated? %>
+  <div class="actions">
+    <%= link_to t(".edit"), edit_article_path(@article), class: "actions__item" %>
+    <%= link_to t(".destroy"), article_path(@article), data: { turbo_method: :delete, turbo_confirm: t(".are_you_sure") }, class: "actions__item" %>
+  </div>
+<% end %>
