@@ -1,4 +1,6 @@
 .articles {
+    width: 100%;
+
     .articles__flex {
         display: flex;
         justify-content: space-between;

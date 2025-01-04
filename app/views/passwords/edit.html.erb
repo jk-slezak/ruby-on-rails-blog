@@ -1,9 +1,11 @@
-<h1><% t (".title") %></h1>
+<div class="container">
+  <h1><% t (".title") %></h1>
 
-<%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
+  <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
 
-<%= form_with url: password_path(params[:token]), method: :put do |form| %>
-  <%= form.password_field :password, required: true, autocomplete: "new-password", placeholder: t(".new_password"), maxlength: 72 %><br>
-  <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password", placeholder: t(".repeat_password"), maxlength: 72 %><br>
-  <%= form.submit t(".save") %>
-<% end %>
+  <%= form_with url: password_path(params[:token]), method: :put do |form| %>
+    <%= form.password_field :password, required: true, autocomplete: "new-password", placeholder: t(".new_password"), maxlength: 72 %><br>
+    <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password", placeholder: t(".repeat_password"), maxlength: 72 %><br>
+    <%= form.submit t(".save") %>
+  <% end %>
+</div>
