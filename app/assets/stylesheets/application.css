@@ -17,14 +17,20 @@ body {
 }
 
 main {
-    background-color: var(--color-container);
-    border-radius: 12px;
+    display: flex;
+    justify-content: center;
     max-width: 1440px;
-    padding: 1rem;
+    padding: 0 16px;
     margin: 32px auto 0;
 }
 
 a {
     color: var(--color-link);
     text-decoration: none;
+}
+
+.container {
+    background-color: var(--color-container);
+    border-radius: 12px;
+    padding: 1rem;
 }

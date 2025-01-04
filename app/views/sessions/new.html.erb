@@ -1,12 +1,12 @@
 <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
 <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
 
-<h1><%= t ".title" %></h1>
-<%= form_with url: session_path, class: "form" do |form| %>
-  <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: t(".username"), value: params[:email_address] %>
-  <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: t(".password"), maxlength: 72 %>
-  <%= form.submit t(".sign_in") %>
-<% end %>
-<br>
-
-<%= link_to t(".forgot_password"), new_password_path %>
+<div class="login container">
+  <h1><%= t ".title" %></h1>
+  <%= form_with url: session_path, class: "form" do |form| %>
+    <%= form.email_field :email_address, required: true, autofocus: true, autocomplete: "username", placeholder: t(".username"), value: params[:email_address], class: "form__input" %>
+    <%= form.password_field :password, required: true, autocomplete: "current-password", placeholder: t(".password"), maxlength: 72, class: "form__input" %>
+    <%= form.submit t(".sign_in"), class: "form__submit"%>
+  <% end %>
+  <%= link_to t(".forgot_password"), new_password_path %>
+</div>
